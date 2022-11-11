@@ -1,4 +1,5 @@
 /**/config/**/*.json
+/**/config/**/*.ts
 !/**/config/**/*.example.json
 node_modules
 
