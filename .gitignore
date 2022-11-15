@@ -1,6 +1,7 @@
 /**/config/**/*.json
 /**/config/**/*.ts
 !/**/config/**/*.example.json
+!/**/config/**/*.example.ts
 node_modules
 
 logs

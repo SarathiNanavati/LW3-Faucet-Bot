@@ -2,6 +2,8 @@ import { Client, Events, Collection } from "discord.js";
 import fs from "fs";
 import path from "path";
 import { config } from "../config/config";
+import connectDB from "./database/connect";
+import { toUpperCase } from "./utils/utils";
 
 export interface CommandCollectionClient extends Client {
   commands?: Collection<any, any>;
@@ -63,7 +65,9 @@ try {
 }
 
 (async () => {
-  client.login(config.client.token);
+  await connectDB();
+  console.log("Connected to DB");
+  client.login(config.client.discord_bot_token);
   console.log("Logged in to discord");
 })().catch((err) => {
   if (err instanceof Error) {
