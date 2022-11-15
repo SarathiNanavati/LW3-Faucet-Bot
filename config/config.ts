@@ -53,6 +53,12 @@ export const config: ConfigMapping = {
           amount: 1,
           coolDownPeriodInMilliSeconds: 24 * 60 * 60 * 1000,
         },
+        link: {
+          nativeToken: false,
+          contractAddress: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
+          amount: 1,
+          coolDownPeriodInMilliSeconds: 24 * 60 * 60 * 1000,
+        },
       },
       explorer: "https://mumbai.polygonscan.com/tx/",
       nodeRpcURL: "https://matic-mumbai.chainstacklabs.com",
