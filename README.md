@@ -1,6 +1,6 @@
 # LW3 Faucet
 
-Project created for LearnWeb3DAO bountie of LearnWeb3.
+Project created for LearnWeb3DAO bountie of EarnWeb3.
 
 ## Getting started
 
@@ -45,7 +45,8 @@ Project created for LearnWeb3DAO bountie of LearnWeb3.
 - Token can be requested by running `/faucet <chain> <token>` command
   e.g. `/faucet goerli eth`
 - As soon as `/faucet` is typed, menu will appear which will help you to select chain/network and token as shown below
-  pending pending
+  ![image](https://user-images.githubusercontent.com/56193257/201918496-9ec11829-6c0c-4e56-93a6-270f21386b2e.png) 
+  ![image](https://user-images.githubusercontent.com/56193257/201918613-d4136ce5-8548-4839-978b-766ba8001877.png)
 
 ## Demo/Screenshot
 
@@ -153,31 +154,44 @@ Update config.ts as per following layout
 
 #### Config files
 
-- config\config.ts
+- [config/config.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/config/config.ts) Contains entire configuration details required for bot to run
 
 #### Faucet Command File
 
-- src\commands\faucet.ts === Contains Commands Declaration and Event Handler
+- [src/commands/faucet.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/commands/faucet.ts) 
+    Contains Commands Declaration and Event Handler
+- [src/utils/faucet-utils.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/utils/faucet-utils.ts)
+    Utility functions for `faucet.ts` file.
 
 #### Embed Builder
 
--src\embeds\responseEmbed.ts
+-[src/embeds/responseEmbed.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/embeds/responseEmbed.ts)
+    Function to create response Embed for Better UI.
 
 #### Ethers files
 
-- src\utils\ethers-utils.ts
+- [src/utils/ethers-utils.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/utils/ethers-utils.ts)
+    Utility Functions to interact with Blockchain Network
 
 #### Database files
 
-- src\database\connect.ts
-- src\database\UserRequestCoolDown.ts
-- src\utils\db-utils.ts
+- [src/database/connect.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/database/connect.ts)
+    Function to connect to Database
+    
+- [src/database/UserRequestCoolDown.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/database/UserRequestCoolDown.ts)
+    UserRequestCoolDown Entity is registered here
+
+- [src/utils/db-utils.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/utils/db-utils.ts)
+    Contains Database Utility Functions
 
 #### Events/Listener registration function
 
-- src\events\clientReady.ts
-- src\events\interactionCreate.ts
+- [src/events/clientReady.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/events/clientReady.ts)
+- [src/events/interactionCreate.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/utils/interactionResponse.ts)
+
+    Event/Listener Handlers
 
 #### Utility Functions
 
-- src\utils\utils.ts
+- [src/utils/utils.ts](https://github.com/SarathiNanavati/LW3-Faucet-Bot/blob/master/src/utils/utils.ts)
+    Other Utility Functions
